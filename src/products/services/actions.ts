@@ -5,6 +5,8 @@ interface GetProductsOptions {
 }
 
 export const getProducts = async ({ filterKey }: GetProductsOptions) => {
-  const { data } = await productsApi.get<Product[]>(`/products`);
+  const filterUrl = filterKey ? `category=${filterKey}` : ``;
+
+  const { data } = await productsApi.get<Product[]>(`/products?${filterUrl}`);
   return data;
 };
