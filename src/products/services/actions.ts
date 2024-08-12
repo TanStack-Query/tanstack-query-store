@@ -1,7 +1,7 @@
 import { type Product, productsApi } from "..";
 
 interface GetProductsOptions {
-  filterKey: string;
+  filterKey?: string;
 }
 
 export const getProducts = async ({ filterKey }: GetProductsOptions) => {
