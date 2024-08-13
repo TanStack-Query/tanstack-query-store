@@ -124,9 +124,9 @@ export const NewProduct = () => {
               type="submit"
               className="mt-2"
               color="primary"
-              isDisabled={productMutaion.isPending}
+              isDisabled={productMutation.isPending}
             >
-              {productMutaion.isPending ? "Cargando..." : "Crear producto"}
+              {productMutation.isPending ? "Cargando..." : "Crear producto"}
             </Button>
           </div>
 
